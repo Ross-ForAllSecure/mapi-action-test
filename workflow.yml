@@ -36,7 +36,7 @@ jobs:
       # mode & send stacktraces back on "500 Internal Server Error" responses
       # (don't do this in production though)
       - name: Start your API
-        run: ./run_your_api.sh & # <- update this
+        run: "true" & # <- update this
 
       # Run Mayhem for API
       - name: Mayhem for API
@@ -44,8 +44,8 @@ jobs:
         continue-on-error: true
         with:
           mapi-token: ${{ secrets.MAPI_TOKEN }}
-          api-url: https://demo-api.mayhem4api.forallsecure.com/api/v3/
-          api-spec: https://demo-api.mayhem4api.forallsecure.com/api/v3/openapi.json
+          api-url: "https://demo-api.mayhem4api.forallsecure.com/api/v3/"
+          api-spec: "https://demo-api.mayhem4api.forallsecure.com/api/v3/openapi.json"
           duration: 60
           sarif-report: mapi.sarif
           html: mapi.html
