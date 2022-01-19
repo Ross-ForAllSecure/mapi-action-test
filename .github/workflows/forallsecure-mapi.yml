@@ -49,10 +49,6 @@ jobs:
           duration: 5
           html-report: mapi.html
           experimental-rewrite-plugin: "$GITHUB_WORKSPACE/foo.bash"
-          extra-args:
-            - foo
-            - bar 
-            - baz
 
       # Archive HTML report
       - name: Archive Mayhem for API report
