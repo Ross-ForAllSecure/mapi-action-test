@@ -40,7 +40,7 @@ jobs:
 
       # Run Mayhem for API
       - name: Mayhem for API
-        uses: ForAllSecure/mapi-action@v1
+        uses: ForAllSecure/mapi-action@v1.1.0
         continue-on-error: true
         with:
           mapi-token: ${{ secrets.MAPI_TOKEN }}
