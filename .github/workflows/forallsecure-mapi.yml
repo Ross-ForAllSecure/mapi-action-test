@@ -48,7 +48,7 @@ jobs:
           api-spec: "https://demo-api.mayhem4api.forallsecure.com/api/v3/openapi.json"
           duration: 60
           sarif-report: mapi.sarif
-          html: mapi.html
+          html-report: mapi.html
 
       # Archive HTML report
       - name: Archive Mayhem for API report
