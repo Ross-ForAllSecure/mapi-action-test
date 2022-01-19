@@ -49,6 +49,7 @@ jobs:
           duration: 60
           sarif-report: mapi.sarif
           html-report: mapi.html
+          experimental-rewrite-plugin: /dev/null
 
       # Archive HTML report
       - name: Archive Mayhem for API report
