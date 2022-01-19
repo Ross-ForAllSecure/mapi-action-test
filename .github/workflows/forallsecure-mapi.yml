@@ -36,7 +36,7 @@ jobs:
       # mode & send stacktraces back on "500 Internal Server Error" responses
       # (don't do this in production though)
       - name: Start your API
-        run: "true" & # <- update this
+        run: "true &" # <- update this
 
       # Run Mayhem for API
       - name: Mayhem for API
