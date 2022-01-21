@@ -49,7 +49,7 @@ jobs:
           duration: 5
           html-report: mapi.html
           experimental-rewrite-plugin: "./plugin-noop-rewrite"
-          experimental-classify-plugin: "./plugin-noop-classify" 
+          experimental-classify-plugin: "./plugin-noop-classify"
 
       # Archive HTML report
       - name: Archive Mayhem for API report
