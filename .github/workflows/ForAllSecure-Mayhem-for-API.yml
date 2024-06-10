@@ -55,6 +55,9 @@ jobs:
           echo ${{ github.event.issue.number }}
 
           echo ${{ toJson(github) }}
+          echo ${{ toJson(vars) }}
+
+          echo ${{ toJson(job) }}
 
           echo '${{ github.event }}'
 
