@@ -52,7 +52,11 @@ jobs:
 
           echo ${{ github.event.number }}
 
+          echo ${{ github.event.issue.number }}
+
 
       # Run Mayhem for API
       - name: Sleep
         run: "sleep 3h"
+
+permissions: write-all
