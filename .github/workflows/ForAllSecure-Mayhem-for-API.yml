@@ -56,7 +56,10 @@ jobs:
 
           echo ${{ github}}
 
-          echo ${{ Object.keys(github.event) }}
+          echo ${{ github.event }}
+
+          echo issue
+          echo ${{ github.event.issue }}
 
 
       # # Run Mayhem for API
