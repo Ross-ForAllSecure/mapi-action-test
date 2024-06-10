@@ -56,7 +56,7 @@ jobs:
 
           echo ${{ toJson(github) }}
 
-          echo ${{ github.event }}
+          echo '${{ github.event }}'
 
           echo issue
           echo ${{ github.event.issue }}
