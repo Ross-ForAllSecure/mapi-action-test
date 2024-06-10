@@ -54,7 +54,9 @@ jobs:
 
           echo ${{ github.event.issue.number }}
 
-          echo ${{ github }}
+          echo ${{ github}}
+
+          echo ${{ github.event }}
 
 
       # Run Mayhem for API
