@@ -50,6 +50,8 @@ jobs:
 
           echo ${{ github.event.pull_request.number }}
 
+          echo ${{ github.event.number }}
+
 
       # Run Mayhem for API
       - name: Sleep
