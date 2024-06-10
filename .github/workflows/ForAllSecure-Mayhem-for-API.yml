@@ -48,7 +48,7 @@ jobs:
 
           env | sort
 
-          echo ${{github.context.issue.number}}
+          echo ${{ github.event.pull_request.number }}
 
 
       # Run Mayhem for API
