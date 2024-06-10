@@ -56,11 +56,11 @@ jobs:
 
           echo ${{ github}}
 
-          echo ${{ github.event }}
+          echo ${{ Object.keys(github.event) }}
 
 
-      # Run Mayhem for API
-      - name: Sleep
-        run: "sleep 3h"
+      # # Run Mayhem for API
+      # - name: Sleep
+      #   run: "sleep 3h"
 
 permissions: write-all
