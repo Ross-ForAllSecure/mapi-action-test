@@ -44,6 +44,8 @@ jobs:
 
           echo $GITHUB_REPOSITORY
 
+          echo $GITHUB_RUN_ID
+
 
       # Run Mayhem for API
       - name: Sleep
