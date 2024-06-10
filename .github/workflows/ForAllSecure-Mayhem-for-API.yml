@@ -46,7 +46,9 @@ jobs:
 
           echo $GITHUB_RUN_ID
 
-          env
+          env | sort
+
+          echo ${{github.context.issue.number}}
 
 
       # Run Mayhem for API
