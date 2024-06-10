@@ -48,6 +48,8 @@ jobs:
 
           env | sort
 
+          gh pr view --json number -q .number || echo ""
+
           echo ${{ github.event.pull_request.number }}
 
           echo ${{ github.event.number }}
