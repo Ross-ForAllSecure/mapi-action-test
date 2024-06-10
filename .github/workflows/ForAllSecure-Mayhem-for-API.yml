@@ -36,6 +36,8 @@ jobs:
       # mode & send stacktraces back on "500 Internal Server Error" responses
       # (don't do this in production though)
       - name: Start your API
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           set -x
           echo ${{ secrets.GITHUB_TOKEN }} | base64
