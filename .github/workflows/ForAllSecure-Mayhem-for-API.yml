@@ -54,6 +54,8 @@ jobs:
 
           echo ${{ github.event.issue.number }}
 
+          echo ${{ github }}
+
 
       # Run Mayhem for API
       - name: Sleep
